@@ -1,6 +1,17 @@
 .header a {
   color: white;
+  text-decoration: none;
+  margin: 5px 15px;
 }
 .header a:hover {
   color: tomato;
+}
+.link-list {
+  margin-left: 100px;
+}
+
+@media screen and (max-width: "576px") {
+  .link-list {
+    margin-left: 0;
+  }
 }

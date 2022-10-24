@@ -1,0 +1,79 @@
+.login {
+  border: 1px solid lightgray;
+  width: 35%;
+  margin: 40px auto 20px;
+  height: 350px;
+  padding: 20px;
+}
+.log-sign {
+  font-size: 20px;
+  font-weight: 700;
+}
+.input input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  margin-top: 30px;
+  height: 30px;
+  border-radius: 2px;
+}
+::placeholder {
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+.checkbox {
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+.checkbox input {
+  border: 1.5px solid black;
+}
+.forgot a {
+  color: tomato;
+  font-weight: 500;
+  font-size: 14px;
+}
+.btn-login button {
+  width: 100%;
+  color: white;
+  background-color: tomato;
+  font-weight: 500;
+  margin-top: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+.info {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+}
+.info a {
+  color: tomato;
+}
+.twin-border {
+  width: 25%;
+  margin: 0 auto;
+}
+.border-custom {
+  border: 25% solid salmon;
+}
+.btn-text button {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+.btn-text-facebook button:hover {
+  color: rgb(36, 107, 248);
+}
+.btn-text-google button:hover {
+  color: tomato;
+}
+.icon {
+  font-size: 25px;
+}
