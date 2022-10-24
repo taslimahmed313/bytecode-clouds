@@ -2,6 +2,15 @@
   border: 1px solid lightgray;
   width: 35%;
   margin: 40px auto 20px;
-  height: 520px;
+  height: 450px;
   padding: 20px;
+}
+@media screen and (max-width: 576px) {
+  .register {
+    width: 100%;
+    margin: 0px 15px;
+  }
+  .btn-text-google {
+    width: 200px;
+  }
 }

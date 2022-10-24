@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-
+import { FaGithub } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
 import './Login.css';
 
@@ -9,7 +10,7 @@ const Login = () => {
     return (
       <div>
         <div className="login">
-          <form >
+          <form>
             <h4 className="mb-0 log-sign">Login</h4>
             <div className="input">
               <input
@@ -45,23 +46,22 @@ const Login = () => {
               <button type="submit">Login</button>
             </div>
             <p className="info">
-              Don't have an account?{" "}
-              <Link to="/signup">Create an account</Link>
+              Don't have an account? <Link to="/signup">Create an account</Link>
             </p>
           </form>
         </div>
         <div className="text-center">Or</div>
         <hr className="w-25 mx-auto my-0" />
-        <div className="w-25 mx-auto my-3 btn-text btn-text-facebook">
-          <button className="w-100 rounded-pill d-flex align-items-center">
-            <p className="text-primary icon"></p>
-            <span className="ms-4">Continue With Facebook</span>
-          </button>
-        </div>
         <div className="w-25 mx-auto my-3 btn-text btn-text-google">
           <button className="w-100 rounded-pill d-flex  align-items-center">
-            <p className="icon"></p>
+            <FcGoogle className="icon"></FcGoogle>
             <span className="ms-4">Continue With Google</span>
+          </button>
+        </div>
+        <div className="w-25 mx-auto my-3 btn-text btn-text-facebook">
+          <button className="w-100 rounded-pill d-flex align-items-center">
+            <FaGithub className="text-primary icon"></FaGithub>
+            <span className="ms-4">Continue With Facebook</span>
           </button>
         </div>
       </div>

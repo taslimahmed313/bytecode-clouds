@@ -10,8 +10,9 @@
   margin-left: 100px;
 }
 
-@media screen and (max-width: "576px") {
+@media screen and (max-width: 576px) {
   .link-list {
+    text-align: center;
     margin-left: 0;
   }
 }

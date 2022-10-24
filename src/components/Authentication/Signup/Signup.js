@@ -12,17 +12,15 @@ const Signup = () => {
             <div className="input">
               <input
                 type="text"
-                name="firstName"
-                id="first-name"
-                placeholder="First Name"
+                name="fullName"
+                placeholder="Full Name"
               />
             </div>
             <div className="input">
               <input
                 type="text"
-                name="lastName"
-                id="lastName"
-                placeholder="Last Name"
+                name="photoURL"
+                placeholder="Photo URL"
               />
             </div>
             <div className="input">
@@ -30,7 +28,7 @@ const Signup = () => {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="User Name or Email"
+                placeholder="Email Address"
               />
             </div>
             <div className="input">
@@ -41,20 +39,11 @@ const Signup = () => {
                 placeholder="Password"
               />
             </div>
-            <div className="input">
-              <input
-                type="password"
-                name="confirmPassword"
-                id="confirm-password"
-                placeholder="Confirm Password"
-              />
-            </div>
             <div className="checkbox mt-3">
               <Form.Group controlId="formBasicCheckbox">
                 <Form.Check
-                  className="mt-2"
+                  className="text-start"
                   type="checkbox"
-                  
                   label={
                     <>
                       Accept our <Link to="/terms">Terms and Conditions</Link>
@@ -72,20 +61,6 @@ const Signup = () => {
               Already have an account? <Link to="/login">Login</Link>
             </p>
           </form>
-        </div>
-        <div className="text-center">Or</div>
-        <hr className="w-25 mx-auto my-0" />
-        <div className="w-25 mx-auto my-3 btn-text btn-text-facebook">
-          <button className="w-100 rounded-pill d-flex align-items-center">
-            {/* <FaFacebook className="text-primary icon"></FaFacebook> */}
-            <span className="ms-4">Continue With Facebook</span>
-          </button>
-        </div>
-        <div className="w-25 mx-auto my-3 btn-text btn-text-google">
-          <button className="w-100 rounded-pill d-flex  align-items-center">
-            {/* <FcGoogle className="icon"></FcGoogle> */}
-            <span className="ms-4">Continue With Google</span>
-          </button>
         </div>
       </div>
     );
