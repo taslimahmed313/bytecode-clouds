@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './CourseCard.css';
 
@@ -18,9 +18,10 @@ const CourseCard = ({course}) => {
         <p>
           <small>{description}</small>
         </p>
+        <h5>What you'll learn</h5>
         {outline.map((learn) => (
-          <div className='text-start'>
-            <FaCheckCircle></FaCheckCircle>
+          <div className="text-start">
+            <FaArrowAltCircleRight></FaArrowAltCircleRight>
             <span>{learn}</span>
           </div>
         ))}

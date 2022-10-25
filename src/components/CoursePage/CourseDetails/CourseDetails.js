@@ -11,16 +11,16 @@ const CourseDetails = () => {
       <Card>
         <Card.Header>Featured</Card.Header>
         <Card.Body>
-            <Image src={img} style={{width:'100%'}}></Image>
+          <Image src={img} style={{ width: "100%" }}></Image>
           <Card.Title>{caption}</Card.Title>
-          <Card.Text>
-            {details}
-          </Card.Text>
-          <FaCheckCircle></FaCheckCircle>
-          {
-            outline.map(learn=> <div><FaCheckCircle></FaCheckCircle><span>{learn}</span></div>)
-          }
-          <Button variant="primary">Go somewhere</Button>
+          <Card.Text>{details}</Card.Text>
+          {outline.map((learn) => (
+            <div>
+              <FaCheckCircle></FaCheckCircle>
+              <span>{learn}</span>
+            </div>
+          ))}
+          <Button variant="primary">Get Premium Access</Button>
         </Card.Body>
       </Card>
     );
