@@ -21,7 +21,7 @@ const Header = () => {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className='link-list'>
                   <Nav>
-                    <Link>Courses</Link>
+                    <Link to='/course'>Courses</Link>
                   </Nav>
                   <Nav>
                     <Link>FAQ</Link>

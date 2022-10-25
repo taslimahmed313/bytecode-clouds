@@ -61,21 +61,23 @@
 .border-custom {
   border: 25% solid salmon;
 }
-.btn-text button {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 5px;
-  border: 1px solid lightgray;
-  background-color: white;
-}
-.btn-text-facebook button:hover {
-  color: rgb(36, 107, 248);
-}
-.btn-text-google button:hover {
-  color: tomato;
-}
 .icon {
   font-size: 25px;
+}
+.btn-google {
+  font-size: 14px;
+  font-weight: 500;
+  outline: 1px solid tomato;
+  padding: 5px 10px;
+  margin: 0;
+}
+.btn-google:hover {
+  color: white;
+  background-color: tomato;
+}
+.icon-text {
+  font-size: 14px;
+  font-weight: 500;
 }
 @media screen and (max-width: 576px) {
   .login {

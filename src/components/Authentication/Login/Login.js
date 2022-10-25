@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
@@ -52,18 +52,23 @@ const Login = () => {
         </div>
         <div className="text-center">Or</div>
         <hr className="w-25 mx-auto my-0" />
-        <div className="w-25 mx-auto my-3 btn-text btn-text-google">
-          <button className="w-100 rounded-pill d-flex  align-items-center">
+        <div
+          className="w-25 mx-auto my-3 rounded-pill btn-google"
+        >
+          <div className="w-100 d-flex align-items-center">
             <FcGoogle className="icon"></FcGoogle>
-            <span className="ms-4">Continue With Google</span>
-          </button>
+            <span className="ms-4 icon-text">Continue With Google</span>
+          </div>
         </div>
-        <div className="w-25 mx-auto my-3 btn-text btn-text-facebook">
-          <button className="w-100 rounded-pill d-flex align-items-center">
-            <FaGithub className="text-primary icon"></FaGithub>
-            <span className="ms-4">Continue With Facebook</span>
-          </button>
-        </div>
+        <Button
+          variant="outline-dark"
+          className="w-25 mx-auto my-3 rounded-pill"
+        >
+          <div className="w-100 d-flex align-items-center">
+            <FaGithub className="icon"></FaGithub>
+            <span className="ms-4 icon-text">Continue With Github</span>
+          </div>
+        </Button>
       </div>
     );
 };
