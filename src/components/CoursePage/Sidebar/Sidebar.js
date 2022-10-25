@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Sidebar.css';
 
 const Sidebar = () => {
 
@@ -12,11 +13,11 @@ const Sidebar = () => {
     },[])
 
     return (
-      <div>
+      <div className='sidebar'>
         <h3>It is Sidebar</h3>
         {categories.map((singleCategory) => (
           <p>
-            <Link>{singleCategory.category}</Link>
+            <Link to={`/course/${singleCategory.id}`}>{singleCategory.category}</Link>
           </p>
         ))}
       </div>

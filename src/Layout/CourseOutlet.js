@@ -10,10 +10,10 @@ const CourseOutlet = () => {
             <Header></Header>
             <Container>
                 <Row>
-                    <Col lg='4'>
+                    <Col lg='3'>
                         <Sidebar></Sidebar>
                     </Col>
-                    <Col lg='8'>
+                    <Col lg='9'>
                         <Outlet></Outlet>
                     </Col>
                 </Row>
