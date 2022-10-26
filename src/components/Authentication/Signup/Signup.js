@@ -3,7 +3,6 @@ import { Form } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
-import Header from '../../Header/Header';
 import './Signup.css';
 
 const Signup = () => {
@@ -37,7 +36,6 @@ const Signup = () => {
 
     return (
       <div className='signUp-body'>
-        <Header></Header>
         <div className="register">
           <form onSubmit={handleSubmit}>
             <h4 className="mb-0 log-sign">Create an account</h4>

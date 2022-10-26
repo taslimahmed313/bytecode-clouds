@@ -1,5 +1,5 @@
 .home {
-  background: linear-gradient(to bottom right, #3503b8, #06044d);
+  /* background: linear-gradient(to bottom right, #3503b8, #06044d); */
   height: 100vh;
 }
 .home-content {
@@ -21,7 +21,7 @@
   background: linear-gradient(#3503b8, #06044d);
   color: white;
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 10px 30px;
   border-radius: 50px 50px 50px;
   outline: 1px solid white;

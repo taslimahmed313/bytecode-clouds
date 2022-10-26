@@ -39,7 +39,7 @@ const Header = () => {
                     <Link>FAQ</Link>
                   </Nav>
                   <Nav>
-                    <Link>Blog</Link>
+                    <Link to='/blog'>Blog</Link>
                   </Nav>
                   {user?.uid ? (
                     <>

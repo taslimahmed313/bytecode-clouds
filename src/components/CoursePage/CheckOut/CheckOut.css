@@ -1,4 +1,7 @@
-.checkout {
-  color: white;
-  height: 92vh;
+.checkout a {
+  text-decoration: none;
+  color: black;
+}
+.checkout a:hover {
+  text-decoration: underline;
 }

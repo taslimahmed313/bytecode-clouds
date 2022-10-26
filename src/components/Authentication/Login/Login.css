@@ -1,5 +1,4 @@
 .login-body {
-  background: linear-gradient(to bottom right, #3503b8, #06044d);
   height: 100vh;
 }
 .login {
@@ -43,7 +42,7 @@
 }
 .btn-login button {
   width: 100%;
-  color: white;
+  color: black;
   background-color: tomato;
   font-weight: 500;
   margin-top: 15px;
@@ -85,10 +84,9 @@
 .icon-text {
   font-size: 14px;
   font-weight: 500;
-  color: white;
 }
 .btn-github {
-  border: 1px solid white;
+  border: 1px solid black;
 }
 @media screen and (max-width: 576px) {
   .login {

@@ -1,7 +1,7 @@
 .sidebar {
-  background: linear-gradient(to bottom right, #3503b8, #06044d);
+  /* background: linear-gradient(to bottom right, #3503b8, #06044d); */
   height: 100%;
-  color: white;
+  color: #06044d;
   margin: 0px;
   width: 100%;
 }
@@ -10,16 +10,18 @@
 }
 .sidebar a {
   text-decoration: none;
-  color: white;
+  /* color: white; */
   font-weight: 500;
-  border: 1px solid white;
+  border: 1px solid tomato;
   padding: 5px 10px;
   border-radius: 50px 50px 50px;
   margin-top: 10px;
   display: inline-block;
   text-align: start;
+  color: tomato;
 }
 .sidebar a:hover {
   text-decoration: underline;
-  background: #06044d;
+  background: tomato;
+  color: white;
 }

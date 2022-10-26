@@ -5,8 +5,9 @@ import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
-import Header from '../../Header/Header';
 import './Login.css';
+
+
 
 
 const Login = () => {
@@ -40,7 +41,6 @@ const Login = () => {
       // toast.error(error ? error : " Error (auth/wrong-password)");
     });
   }
-  
 
   const handleGoogle = () =>{
     googleSignIn()
@@ -54,7 +54,6 @@ const Login = () => {
 
     return (
       <div className="login-body">
-        <Header></Header>
         <div className="login">
           <form onSubmit={handleSubmit}>
             <h4 className="mb-0 log-sign">Login</h4>
@@ -97,7 +96,7 @@ const Login = () => {
             </p>
           </form>
         </div>
-        <div className="text-center text-white">Or</div>
+        <div className="text-center">Or</div>
         <hr className="w-25 mx-auto my-0" />
         <div className="w-25 mx-auto my-3 rounded-pill btn-google">
           <div
@@ -113,7 +112,7 @@ const Login = () => {
           className="w-25 mx-auto my-3 rounded-pill btn-github"
         >
           <div className="w-100 d-flex align-items-center">
-            <FaGithub className="icon text-white"></FaGithub>
+            <FaGithub className="icon"></FaGithub>
             <span className="ms-4 icon-text">Continue With Github</span>
           </div>
         </Button>

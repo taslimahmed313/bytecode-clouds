@@ -6,7 +6,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const CourseDetails = () => {
     const course = useLoaderData();
-    console.log(course);
     const { caption, details, outline, img,_id } = course;
 
     const willLearn = outline.map(n=>n)
@@ -14,8 +13,8 @@ const CourseDetails = () => {
     const pdfGenerate = () => {
       let doc = new jsPDF("landscape", "px", "a4", "true");
       doc.addImage(img, "PNG",200, 20, 120, 150)
+      doc.text(200, 170, caption);
       doc.text(200, 190, willLearn);
-      doc.text(200, 190, details);
       doc.save("Codefix pdf");
     };
 
