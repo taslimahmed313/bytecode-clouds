@@ -16,8 +16,8 @@ const Sidebar = () => {
       <div className='sidebar'>
         <h3>It is Sidebar</h3>
         {categories.map((singleCategory) => (
-          <p>
-            <Link to={`/course/${singleCategory.id}`} key={singleCategory.id}>{singleCategory.category}</Link>
+          <p key={singleCategory.id}>
+            <Link to={`/course/${singleCategory.id}`}>{singleCategory.category}</Link>
           </p>
         ))}
       </div>

@@ -13,7 +13,7 @@ const CourseHome = () => {
             <h1>This area is Courses Homes.</h1>
             <div className='course-container'>
                 {
-                    courses.map(course=><CourseCard key={course.id} course={course}></CourseCard>)
+                    courses.map(course=><CourseCard key={course._id} course={course}></CourseCard>)
                 }
             </div>
         </div>

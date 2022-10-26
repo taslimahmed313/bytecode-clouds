@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button, Card, Image } from 'react-bootstrap';
 import { FaCheckCircle } from 'react-icons/fa';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const CourseDetails = () => {
     const course = useLoaderData();
     console.log(course);
-    const { caption, details, outline, img } = course;
+    const { caption, details, outline, img,_id } = course;
     return (
       <Card>
         <Card.Header>Featured</Card.Header>
@@ -20,7 +20,9 @@ const CourseDetails = () => {
               <span>{learn}</span>
             </div>
           ))}
-          <Button variant="primary">Get Premium Access</Button>
+          <Link to={`/course/checkout/${_id}`}>
+            <Button variant="primary">Get Premium Access</Button>
+          </Link>
         </Card.Body>
       </Card>
     );

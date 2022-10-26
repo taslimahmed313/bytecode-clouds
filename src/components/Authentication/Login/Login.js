@@ -15,6 +15,7 @@ const Login = () => {
 
   const handleSubmit = event =>{
     event.preventDefault();
+    setError('')
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
@@ -29,9 +30,10 @@ const Login = () => {
     .catch(e=>{
       console.error(e);
       setError(e.message);
-      toast.error(error);
+      // toast.error(error ? error : " Error (auth/wrong-password)");
     });
   }
+  
 
   const handleGoogle = () =>{
     googleSignIn()
@@ -78,6 +80,7 @@ const Login = () => {
                 <Link>Forgot Password?</Link>
               </div>
             </div>
+            <p className='mb-0 text-start text-danger mt-2'>{error}</p>
             <div className="btn-login">
               <button type="submit">Login</button>
             </div>

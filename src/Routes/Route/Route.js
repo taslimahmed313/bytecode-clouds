@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../../components/Authentication/Login/Login";
 import Signup from "../../components/Authentication/Signup/Signup";
+import CheckOut from "../../components/CoursePage/CheckOut/CheckOut";
 import CourseDetails from "../../components/CoursePage/CourseDetails/CourseDetails";
 import CourseHome from "../../components/CoursePage/CourseHome/CourseHome";
 import CourseOutlet from "../../Layout/CourseOutlet";
@@ -37,6 +38,14 @@ export const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(
             `https://learning-bytecode-clouds-server.vercel.app/course/${params.id}`
+          ),
+      },
+      {
+        path: "/course/checkout/:id",
+        element: <CheckOut></CheckOut>,
+        loader: ({ params }) =>
+          fetch(
+            `https://learning-bytecode-clouds-server.vercel.app/course/checkout/${params.id}`
           ),
       },
     ],
