@@ -6,6 +6,7 @@ import CourseDetails from "../../components/CoursePage/CourseDetails/CourseDetai
 import CourseHome from "../../components/CoursePage/CourseHome/CourseHome";
 import CourseOutlet from "../../Layout/CourseOutlet";
 import Main from "../../Layout/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -42,7 +43,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/course/checkout/:id",
-        element: <CheckOut></CheckOut>,
+        element: (
+          <PrivateRoute>
+            <CheckOut></CheckOut>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(
             `https://learning-bytecode-clouds-server.vercel.app/course/checkout/${params.id}`

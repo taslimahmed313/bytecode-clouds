@@ -3,7 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import './Login.css';
 
@@ -12,6 +12,11 @@ const Login = () => {
 
   const [error, setError] = useState();
   const { logIn, googleSignIn } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+
 
   const handleSubmit = event =>{
     event.preventDefault();
@@ -26,6 +31,7 @@ const Login = () => {
       console.log(user);
       toast.success("You Successfully Login, Thank You!");
       form.reset();
+      navigate(from, {replace:true});
     })
     .catch(e=>{
       console.error(e);
