@@ -1,34 +1,56 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Form } from 'react-bootstrap';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import './Signup.css';
 
 const Signup = () => {
+
+  const { signUp, userProfileUpdate } = useContext(AuthContext);
+
+  const handleSubmit = event =>{
+    event.preventDefault();
+    const form = event.target;
+    const name = form.fullName.value;
+    const photoUrl = form.photoURL.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, photoUrl, email, password);
+
+    signUp(email, password)
+    .then(result =>{
+      const user = result.user;
+      console.log(user);
+      handleProfileUpdate(name, photoUrl);
+      toast.success("Welcome! You Successfully Register Your Identity!");
+      form.reset();
+    })
+    .catch(e=>console.error(e));
+  }
+
+  const handleProfileUpdate = (name, photoUrl) =>{
+    const profile = {displayName: name, photoURL : photoUrl};
+    userProfileUpdate(profile);
+  }
+
     return (
       <div>
         <div className="register">
-          <form >
+          <form onSubmit={handleSubmit}>
             <h4 className="mb-0 log-sign">Create an account</h4>
             <div className="input">
-              <input
-                type="text"
-                name="fullName"
-                placeholder="Full Name"
-              />
+              <input type="text" name="fullName" placeholder="Full Name"/>
             </div>
             <div className="input">
-              <input
-                type="text"
-                name="photoURL"
-                placeholder="Photo URL"
-              />
+              <input type="text" name="photoURL" placeholder="Photo URL" required />
             </div>
             <div className="input">
               <input
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Email Address"
+                placeholder="Email Address"   required
               />
             </div>
             <div className="input">
@@ -36,7 +58,7 @@ const Signup = () => {
                 type="password"
                 name="password"
                 id="password"
-                placeholder="Password"
+                placeholder="Password" required
               />
             </div>
             <div className="checkbox mt-3">
@@ -53,9 +75,7 @@ const Signup = () => {
               </Form.Group>
             </div>
             <div className="btn-login">
-              <button  type="submit">
-                Sign Up
-              </button>
+              <button type="submit">Sign Up</button>
             </div>
             <p className="info">
               Already have an account? <Link to="/login">Login</Link>

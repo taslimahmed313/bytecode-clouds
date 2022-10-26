@@ -17,7 +17,7 @@ const Sidebar = () => {
         <h3>It is Sidebar</h3>
         {categories.map((singleCategory) => (
           <p>
-            <Link to={`/course/${singleCategory.id}`}>{singleCategory.category}</Link>
+            <Link to={`/course/${singleCategory.id}`} key={singleCategory.id}>{singleCategory.category}</Link>
           </p>
         ))}
       </div>

@@ -1,16 +1,52 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import toast from 'react-hot-toast';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import './Login.css';
 
 
 const Login = () => {
+
+  const [error, setError] = useState();
+  const { logIn, googleSignIn } = useContext(AuthContext);
+
+  const handleSubmit = event =>{
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    
+    logIn(email, password)
+    .then(result =>{
+      const user = result.user;
+      console.log(user);
+      toast.success("You Successfully Login, Thank You!");
+      form.reset();
+    })
+    .catch(e=>{
+      console.error(e);
+      setError(e.message);
+      toast.error(error);
+    });
+  }
+
+  const handleGoogle = () =>{
+    googleSignIn()
+    .then(result =>{
+      const user = result.user;
+      console.log(user);
+      toast.success("Your Google Login is Successful!");
+    })
+    .catch(e=>console.error(e))
+  }
+
     return (
       <div>
         <div className="login">
-          <form>
+          <form onSubmit={handleSubmit}>
             <h4 className="mb-0 log-sign">Login</h4>
             <div className="input">
               <input
@@ -52,10 +88,11 @@ const Login = () => {
         </div>
         <div className="text-center">Or</div>
         <hr className="w-25 mx-auto my-0" />
-        <div
-          className="w-25 mx-auto my-3 rounded-pill btn-google"
-        >
-          <div className="w-100 d-flex align-items-center">
+        <div className="w-25 mx-auto my-3 rounded-pill btn-google">
+          <div
+            onClick={handleGoogle}
+            className="w-100 d-flex align-items-center"
+          >
             <FcGoogle className="icon"></FcGoogle>
             <span className="ms-4 icon-text">Continue With Google</span>
           </div>
