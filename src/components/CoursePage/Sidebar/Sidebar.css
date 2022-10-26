@@ -1,4 +1,25 @@
 .sidebar {
-  position: fixed;
-  top: 70px;
+  background: linear-gradient(to bottom right, #3503b8, #06044d);
+  height: 100%;
+  color: white;
+  margin: 0px;
+  width: 100%;
+}
+.sidebar-link {
+  padding-top: 50px;
+}
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 50px 50px 50px;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: start;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+  background: #06044d;
 }

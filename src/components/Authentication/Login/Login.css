@@ -1,12 +1,4 @@
 .login-body {
-  /* background: linear-gradient(
-    to bottom right,
-    #0f054d,
-    #221648,
-    #3a3d9b,
-    #1a1260,
-    #10074e
-  ); */
   background: linear-gradient(to bottom right, #3503b8, #06044d);
   height: 100vh;
 }

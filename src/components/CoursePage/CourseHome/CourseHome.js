@@ -10,7 +10,7 @@ const CourseHome = () => {
 
     return (
         <div>
-            <h1>This area is Courses Homes.</h1>
+            <h2 className='my-4 text-white'>Explore Our All Master Courses</h2>
             <div className='course-container'>
                 {
                     courses.map(course=><CourseCard key={course._id} course={course}></CourseCard>)

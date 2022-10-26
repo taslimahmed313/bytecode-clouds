@@ -1,13 +1,16 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import './CheckOut.css';
 
 const CheckOut = () => {
     const course = useLoaderData();
     console.log(course)
     return (
-      <div>
-        <h2>This is CheckOUt page</h2>
-        <p>{course.caption}</p>
+      <div className="checkout">
+        <h1>Welcome You !!</h1>
+        <Link className="text-white" to={`/course/${course.category_id}`}>
+          <h2>{course.caption} Course</h2>
+        </Link>
       </div>
     );
 };

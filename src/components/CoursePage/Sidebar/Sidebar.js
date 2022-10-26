@@ -13,13 +13,17 @@ const Sidebar = () => {
     },[])
 
     return (
-      <div className='sidebar'>
-        <h3>It is Sidebar</h3>
-        {categories.map((singleCategory) => (
-          <p key={singleCategory.id}>
-            <Link to={`/course/${singleCategory.id}`}>{singleCategory.category}</Link>
-          </p>
-        ))}
+      <div className="sidebar">
+        <div className='sidebar-link'>
+          <h4 className='text-decoration-underline'>Our Course Topic</h4>
+          {categories.map((singleCategory) => (
+            <p key={singleCategory.id}>
+              <Link to={`/course/${singleCategory.id}`}>
+                {singleCategory.category}
+              </Link>
+            </p>
+          ))}
+        </div>
       </div>
     );
 };

@@ -1,5 +1,6 @@
 .header {
-  background: rgba(0, 0, 0, 0.001);
+  /* background: rgba(0, 0, 0, 0.001); */
+  background: linear-gradient(to bottom right, #3503b8, #06044d);
 }
 .header a {
   text-decoration: none;
