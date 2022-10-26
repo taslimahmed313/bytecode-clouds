@@ -12,10 +12,10 @@ const CourseDetails = () => {
     const willLearn = outline.map(n=>n)
     /* Crate a PDF */
     const pdfGenerate = () => {
-      var doc = new jsPDF("landscape", "px", "a4", "false");
-      // doc.addImage(codeFix, "PNG", 65, 20, 500, 400);
+      let doc = new jsPDF("landscape", "px", "a4", "true");
       doc.addImage(img, "PNG",200, 20, 120, 150)
       doc.text(200, 190, willLearn);
+      doc.text(200, 190, details);
       doc.save("Codefix pdf");
     };
 
