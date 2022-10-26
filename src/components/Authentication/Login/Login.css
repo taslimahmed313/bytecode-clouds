@@ -1,9 +1,23 @@
+.login-body {
+  /* background: linear-gradient(
+    to bottom right,
+    #0f054d,
+    #221648,
+    #3a3d9b,
+    #1a1260,
+    #10074e
+  ); */
+  background: linear-gradient(to bottom right, #3503b8, #06044d);
+  height: 100vh;
+}
 .login {
-  border: 1px solid lightgray;
   width: 35%;
   margin: 40px auto 20px;
   height: 350px;
   padding: 20px;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 3px;
 }
 .log-sign {
   font-size: 20px;
@@ -11,11 +25,11 @@
 }
 .input input {
   width: 100%;
-  border: none;
-  border-bottom: 1px solid lightgray;
-  margin-top: 30px;
-  height: 30px;
-  border-radius: 2px;
+  border: 1px solid lightgray;
+  margin-top: 20px;
+  height: 45px;
+  border-radius: 4px;
+  padding-left: 10px;
 }
 ::placeholder {
   color: black;
@@ -79,6 +93,10 @@
 .icon-text {
   font-size: 14px;
   font-weight: 500;
+  color: white;
+}
+.btn-github {
+  border: 1px solid white;
 }
 @media screen and (max-width: 576px) {
   .login {

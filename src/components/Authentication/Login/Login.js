@@ -5,6 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import Header from '../../Header/Header';
 import './Login.css';
 
 
@@ -52,7 +53,8 @@ const Login = () => {
   }
 
     return (
-      <div>
+      <div className="login-body">
+        <Header></Header>
         <div className="login">
           <form onSubmit={handleSubmit}>
             <h4 className="mb-0 log-sign">Login</h4>
@@ -86,7 +88,7 @@ const Login = () => {
                 <Link>Forgot Password?</Link>
               </div>
             </div>
-            <p className='mb-0 text-start text-danger mt-2'>{error}</p>
+            <p className="mb-0 text-start text-danger mt-2">{error}</p>
             <div className="btn-login">
               <button type="submit">Login</button>
             </div>
@@ -95,7 +97,7 @@ const Login = () => {
             </p>
           </form>
         </div>
-        <div className="text-center">Or</div>
+        <div className="text-center text-white">Or</div>
         <hr className="w-25 mx-auto my-0" />
         <div className="w-25 mx-auto my-3 rounded-pill btn-google">
           <div
@@ -108,10 +110,10 @@ const Login = () => {
         </div>
         <Button
           variant="outline-dark"
-          className="w-25 mx-auto my-3 rounded-pill"
+          className="w-25 mx-auto my-3 rounded-pill btn-github"
         >
           <div className="w-100 d-flex align-items-center">
-            <FaGithub className="icon"></FaGithub>
+            <FaGithub className="icon text-white"></FaGithub>
             <span className="ms-4 icon-text">Continue With Github</span>
           </div>
         </Button>

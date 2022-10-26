@@ -20,7 +20,7 @@ const CourseDetails = () => {
               <span>{learn}</span>
             </div>
           ))}
-          <Link to={`/course/checkout/${_id}`}>
+          <Link to={`/checkout/${_id}`}>
             <Button variant="primary">Get Premium Access</Button>
           </Link>
         </Card.Body>

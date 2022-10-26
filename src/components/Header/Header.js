@@ -19,12 +19,16 @@ const Header = () => {
     return (
       <div>
         <div className="header">
-          <Navbar bg="dark" expand="lg">
+          <Navbar expand="lg">
             <Container>
               <Nav>
-                <Image src={logo} style={{ width: "30px" }}></Image>
+                <Link to='/'>
+                  <Image src={logo} style={{ width: "30px" }}></Image>
+                </Link>
               </Nav>
-              <Navbar.Brand href="#home">Bytecode Clouds</Navbar.Brand>
+              <Navbar.Brand>
+                <Link to="/">Bytecode Clouds</Link>
+              </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="link-list">

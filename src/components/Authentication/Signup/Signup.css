@@ -1,9 +1,22 @@
+.signUp-body {
+  background: linear-gradient(
+    to bottom right,
+    #0f054d,
+    #221648,
+    #3a3d9b,
+    #1a1260,
+    #10074e
+  );
+  height: 100vh;
+}
 .register {
-  border: 1px solid lightgray;
   width: 35%;
   margin: 40px auto 20px;
   height: 450px;
   padding: 20px;
+  background: white;
+  border-radius: 9px;
+  box-shadow: 0 0 10px 10px;
 }
 @media screen and (max-width: 576px) {
   .register {

@@ -1,0 +1,36 @@
+.home {
+  /* background: linear-gradient(
+    to bottom right,
+    #0f054d,
+    #221648,
+    #3a3d9b,
+    #1a1260,
+    #10074e
+  ); */
+
+  background: linear-gradient(to bottom right, #3503b8, #06044d);
+
+  /* background: linear-gradient(
+    to bottom right,
+    #01326c,
+    #01356f,
+    #003873,
+    #003772,
+    #014d85,
+    #0081aa,
+    #018fb3,
+    #007fa8,
+    #016b9b,
+    #00b8ce,
+    #00b2ca,
+    #00cbdc
+  ); */
+  height: 100vh;
+}
+.home-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  margin: 100px 50px;
+  align-items: center;
+  gap: 50px;
+}
