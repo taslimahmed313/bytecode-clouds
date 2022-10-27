@@ -13,9 +13,5 @@
 @media screen and (max-width: 576px) {
   .register {
     width: 100%;
-    margin: 0px 15px;
-  }
-  .btn-text-google {
-    width: 200px;
   }
 }

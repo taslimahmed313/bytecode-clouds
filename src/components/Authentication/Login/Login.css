@@ -75,6 +75,7 @@
   outline: 1px solid tomato;
   padding: 5px 10px;
   margin: 0;
+  width: 250px;
   cursor: pointer;
 }
 .btn-google:hover {
@@ -87,13 +88,11 @@
 }
 .btn-github {
   border: 1px solid black;
+  width: 250px;
 }
 @media screen and (max-width: 576px) {
   .login {
     width: 100%;
     margin-top: 50px;
-  }
-  .btn-text-google {
-    width: 200px;
   }
 }

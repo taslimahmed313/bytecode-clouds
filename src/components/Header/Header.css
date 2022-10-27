@@ -1,13 +1,13 @@
 .header {
   /* background: rgba(0, 0, 0, 0.001); */
-  background: linear-gradient(to bottom right, #3503b8, #06044d);
+  /* background: linear-gradient(to bottom right, #3503b8, #06044d); */
+  background-color: #06042c;
 }
 .header a {
   text-decoration: none;
   margin: 5px 15px;
-  color: black;
   font-weight: 500;
-  color: tomato;
+  color: white;
 }
 .header a:hover {
   text-decoration: underline;

@@ -23,7 +23,7 @@ function App() {
       <GlobalStyles />
       <StyledApp>
         <div className="App">
-          <button onClick={themeToggler}>Theme Change</button>
+          {/* <button onClick={themeToggler}>Theme Change</button> */}
           <RouterProvider router={router}></RouterProvider>
           <Toaster />
         </div>

@@ -42,7 +42,7 @@ const CourseDetails = () => {
               <span>{learn}</span>
             </div>
           ))}
-          <Link to={`/checkout/${_id}`}>
+          <Link to={`/course/checkout/${_id}`}>
             <button className="btn-premium"><FaCrown className='text-warning'></FaCrown> Get Premium Access</button>
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Image, Nav, Navbar } from 'react-bootstrap';
+import { Container, Form, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import logo from '../../images/coding-language.png';
@@ -21,7 +21,7 @@ const Header = () => {
           <Navbar expand="lg">
             <Container>
               <Nav>
-                <Link to='/'>
+                <Link to="/">
                   <Image src={logo} style={{ width: "30px" }}></Image>
                 </Link>
               </Nav>
@@ -38,7 +38,7 @@ const Header = () => {
                     <Link>FAQ</Link>
                   </Nav>
                   <Nav>
-                    <Link to='/blog'>Blog</Link>
+                    <Link to="/blog">Blog</Link>
                   </Nav>
                   {user?.uid ? (
                     <>
@@ -56,8 +56,6 @@ const Header = () => {
                       </Nav>
                     </>
                   )}
-                  <Link>Dark</Link>
-                  <Link>Light</Link>
                   {user?.photoURL ? (
                     <>
                       <span className="text-white">
@@ -75,6 +73,11 @@ const Header = () => {
                   ) : (
                     <></>
                   )}
+                  <Nav className='d-flex align-items-center ms-4'>
+                    <Form>
+                      <Form.Check type="switch" id="custom-switch" label="" />
+                    </Form>
+                  </Nav>
                 </Nav>
               </Navbar.Collapse>
             </Container>

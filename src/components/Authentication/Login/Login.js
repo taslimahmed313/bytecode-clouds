@@ -108,7 +108,7 @@ const Login = () => {
         </div>
         <div className="text-center">Or</div>
         <hr className="w-25 mx-auto my-0" />
-        <div className="w-25 mx-auto my-3 rounded-pill btn-google">
+        <div className="mx-auto my-3 rounded-pill btn-google">
           <div
             onClick={handleGoogle}
             className="w-100 d-flex align-items-center"
@@ -119,7 +119,7 @@ const Login = () => {
         </div>
         <Button
           variant="outline-dark"
-          className="w-25 mx-auto my-3 rounded-pill btn-github"
+          className="mx-auto my-3 rounded-pill btn-github"
           onClick={handleGithubSignIn}
         >
           <div className="w-100 d-flex align-items-center">
