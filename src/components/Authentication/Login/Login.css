@@ -91,7 +91,7 @@
 @media screen and (max-width: 576px) {
   .login {
     width: 100%;
-    margin: 0px 15px;
+    margin-top: 50px;
   }
   .btn-text-google {
     width: 200px;

@@ -1,8 +1,9 @@
 import jsPDF from 'jspdf';
 import React from 'react';
-import { Button, Card, Image } from 'react-bootstrap';
-import { FaCheckCircle } from 'react-icons/fa';
+import { Image } from 'react-bootstrap';
+import { FaCheckCircle, FaCrown } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
+import './CourseDetails.css';
 
 const CourseDetails = () => {
     const course = useLoaderData();
@@ -12,19 +13,29 @@ const CourseDetails = () => {
     /* Crate a PDF */
     const pdfGenerate = () => {
       let doc = new jsPDF("landscape", "px", "a4", "true");
-      doc.addImage(img, "PNG",200, 20, 120, 150)
+      // doc.addImage(img, "PNG",200, 20, 120, 150)
       doc.text(200, 170, caption);
       doc.text(200, 190, willLearn);
-      doc.save("Codefix pdf");
+      doc.save("Bytecode Clouds pdf file");
     };
 
     return (
-      <Card>
-        <Card.Header><Button onClick={pdfGenerate}>Download PDF</Button></Card.Header>
-        <Card.Body>
-          <Image src={img} style={{ width: "100%" }}></Image>
-          <Card.Title>{caption}</Card.Title>
-          <Card.Text>{details}</Card.Text>
+      <div>
+        <div className="course-details">
+          <div>
+            <button className="btn-pdf" onClick={pdfGenerate}>
+              Download PDF
+            </button>
+            <hr />
+          </div>
+          <Image
+            src={img}
+            style={{ width: "100%", padding: "0px 13px" }}
+          ></Image>
+          <h4 className="mt-2">{caption}</h4>
+          <p>
+            <small>{details}</small>
+          </p>
           {outline.map((learn) => (
             <div>
               <FaCheckCircle></FaCheckCircle>
@@ -32,10 +43,10 @@ const CourseDetails = () => {
             </div>
           ))}
           <Link to={`/checkout/${_id}`}>
-            <Button variant="primary">Get Premium Access</Button>
+            <button className="btn-premium"><FaCrown className='text-warning'></FaCrown> Get Premium Access</button>
           </Link>
-        </Card.Body>
-      </Card>
+        </div>
+      </div>
     );
 };
 

@@ -1,7 +1,5 @@
 .sidebar {
-  /* background: linear-gradient(to bottom right, #3503b8, #06044d); */
   height: 100%;
-  color: #06044d;
   margin: 0px;
   width: 100%;
 }
@@ -11,17 +9,27 @@
 .sidebar a {
   text-decoration: none;
   /* color: white; */
-  font-weight: 500;
+  /* font-weight: 500;
   border: 1px solid tomato;
   padding: 5px 10px;
   border-radius: 50px 50px 50px;
   margin-top: 10px;
   display: inline-block;
   text-align: start;
-  color: tomato;
+  color: tomato; */
+  background: linear-gradient(#3503b8, #06044d);
+  font-weight: 500;
+  color: white;
+  padding: 10px 13px;
+  border-radius: 8px;
+  outline: 1px solid white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 10px;
+  display: inline-block;
 }
 .sidebar a:hover {
   text-decoration: underline;
-  background: tomato;
+  /* background: tomato; */
+  background: #06044d;
   color: white;
 }

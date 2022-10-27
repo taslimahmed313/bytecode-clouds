@@ -1,0 +1,26 @@
+.course-details {
+  border: 2px solid salmon;
+  margin: 50px 20px;
+}
+.btn-pdf {
+  border: none;
+  background: linear-gradient(#3503b8, #06044d);
+  font-weight: 500;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px 50px 50px;
+  outline: 1px solid white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 20px;
+}
+.btn-premium {
+  border: none;
+  background: linear-gradient(#3503b8, #06044d);
+  font-weight: 500;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px 50px 50px;
+  outline: 1px solid white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 20px;
+}
