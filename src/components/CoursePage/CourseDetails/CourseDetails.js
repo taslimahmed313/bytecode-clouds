@@ -1,7 +1,7 @@
 import jsPDF from 'jspdf';
 import React from 'react';
 import { Image } from 'react-bootstrap';
-import { FaCheckCircle, FaCrown } from 'react-icons/fa';
+import { FaArrowCircleRight, FaCheckCircle, FaCrown } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import './CourseDetails.css';
 
@@ -28,22 +28,25 @@ const CourseDetails = () => {
             </button>
             <hr />
           </div>
-          <Image
-            src={img}
-            style={{ width: "100%", padding: "0px 13px" }}
-          ></Image>
-          <h4 className="mt-2">{caption}</h4>
-          <p>
-            <small>{details}</small>
-          </p>
-          {outline.map((learn) => (
-            <div>
-              <FaCheckCircle></FaCheckCircle>
-              <span>{learn}</span>
-            </div>
-          ))}
+          <div className="course-content">
+            <Image src={img} style={{ width: "100%" }}></Image>
+            <h4 className="mt-2">{caption}</h4>
+            <p>
+              <small>{details}</small>
+            </p>
+            <h5 className="text-start text-decoration-underline">What you'll learn <FaArrowCircleRight>
+              </FaArrowCircleRight></h5>
+            {outline.map((learn) => (
+              <div className="btn-check-circle">
+                <FaCheckCircle className="me-2"></FaCheckCircle>
+                <span>{learn}</span>
+              </div>
+            ))}
+          </div>
           <Link to={`/course/checkout/${_id}`}>
-            <button className="btn-premium"><FaCrown className='text-warning'></FaCrown> Get Premium Access</button>
+            <button className="btn-premium">
+              <FaCrown className="text-warning"></FaCrown> Get Premium Access
+            </button>
           </Link>
         </div>
       </div>

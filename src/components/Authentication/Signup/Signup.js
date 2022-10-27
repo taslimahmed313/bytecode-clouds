@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
@@ -7,10 +7,12 @@ import './Signup.css';
 
 const Signup = () => {
 
+  const [error, setError] = useState();
   const { signUp, userProfileUpdate } = useContext(AuthContext);
 
   const handleSubmit = event =>{
     event.preventDefault();
+    setError('');
     const form = event.target;
     const name = form.fullName.value;
     const photoUrl = form.photoURL.value;
@@ -26,7 +28,10 @@ const Signup = () => {
       toast.success("Welcome! You Successfully Register Your Identity!");
       form.reset();
     })
-    .catch(e=>console.error(e));
+    .catch(e=>{
+      console.error(e);
+      setError(e.message)
+    });
   }
 
   const handleProfileUpdate = (name, photoUrl) =>{
@@ -74,6 +79,7 @@ const Signup = () => {
                 />
               </Form.Group>
             </div>
+            <p className='text-danger text-start mb-0'>{error}</p>
             <div className="btn-login">
               <button type="submit">Sign Up</button>
             </div>

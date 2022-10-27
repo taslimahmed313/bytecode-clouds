@@ -12,6 +12,7 @@ const CheckOut = () => {
         <Link to={`/course/${course.category_id}`}>
           <h2>{course.caption} Course</h2>
         </Link>
+        <h4>${course.price}</h4>
       </div>
     );
 };
