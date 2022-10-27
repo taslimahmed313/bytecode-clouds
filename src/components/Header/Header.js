@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Container, Form, Image, Nav, Navbar } from 'react-bootstrap';
+import { FaMoon, FaSun, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import logo from '../../images/coding-language.png';
 import './Header.css';
-          
+
 const Header = () => {
+
+  const [darken, setDarken]  = useState(false);
 
   const {user, logOut} = useContext(AuthContext);
 
@@ -13,6 +16,10 @@ const Header = () => {
     logOut()
     .then(()=>{})
     .catch(e=>console.error(e));
+  }
+
+  const handleDarkTheme = (event) =>{
+      setDarken(event.target.checked)
   }
 
     return (
@@ -56,6 +63,21 @@ const Header = () => {
                       </Nav>
                     </>
                   )}
+                  <Nav className="d-flex align-items-center ms-4">
+                    <Form>
+                      <Form.Check
+                        type="switch"
+                        onClick={handleDarkTheme}
+                        id="custom-switch"
+                        label=""
+                      />
+                    </Form>
+                    {darken ? (
+                      <FaSun className='text-white me-3'></FaSun>
+                    ) : (
+                      <FaMoon className='text-white me-3'></FaMoon>
+                    )}
+                  </Nav>
                   {user?.photoURL ? (
                     <>
                       <span className="text-white">
@@ -71,13 +93,12 @@ const Header = () => {
                       </span>
                     </>
                   ) : (
-                    <></>
+                    <>
+                      <div className="d-flex align-items-center ">
+                        <FaUser className="text-white"></FaUser>
+                      </div>
+                    </>
                   )}
-                  <Nav className='d-flex align-items-center ms-4'>
-                    <Form>
-                      <Form.Check type="switch" id="custom-switch" label="" />
-                    </Form>
-                  </Nav>
                 </Nav>
               </Navbar.Collapse>
             </Container>

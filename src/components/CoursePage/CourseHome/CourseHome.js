@@ -6,7 +6,6 @@ import './CourseHome.css';
 const CourseHome = () => {
 
     const courses = useLoaderData();
-    console.log(courses);
 
     return (
         <div>

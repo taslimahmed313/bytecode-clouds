@@ -43,7 +43,7 @@ const Signup = () => {
               <input type="text" name="fullName" placeholder="Full Name"/>
             </div>
             <div className="input">
-              <input type="text" name="photoURL" placeholder="Photo URL" required />
+              <input type="text" name="photoURL" placeholder="Photo URL"/>
             </div>
             <div className="input">
               <input
