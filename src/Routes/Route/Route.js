@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/",
+    path: "/course",
     element: <CourseOutlet></CourseOutlet>,
     children: [
       {
@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
           ),
       },
       {
-        path: "/checkout/:id",
+        path: "/course/checkout/:id",
         element: (
           <PrivateRoute>
             <CheckOut></CheckOut>

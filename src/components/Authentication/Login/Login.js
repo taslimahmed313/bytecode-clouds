@@ -13,7 +13,7 @@ import './Login.css';
 const Login = () => {
 
   const [error, setError] = useState();
-  const { logIn, googleSignIn } = useContext(AuthContext);
+  const { logIn, googleSignIn, githubSignIn } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -50,6 +50,16 @@ const Login = () => {
       toast.success("Your Google Login is Successful!");
     })
     .catch(e=>console.error(e))
+  }
+
+  const handleGithubSignIn = () =>{
+    githubSignIn()
+    .then(result =>{
+      const user = result.user;
+      console.log(user);
+      toast.success("Your Github Login is Successful!");
+    })
+    .catch(e=>console.log(e));
   }
 
     return (
@@ -110,6 +120,7 @@ const Login = () => {
         <Button
           variant="outline-dark"
           className="w-25 mx-auto my-3 rounded-pill btn-github"
+          onClick={handleGithubSignIn}
         >
           <div className="w-100 d-flex align-items-center">
             <FaGithub className="icon"></FaGithub>
