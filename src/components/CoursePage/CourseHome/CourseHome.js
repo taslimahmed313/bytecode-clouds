@@ -6,11 +6,12 @@ import './CourseHome.css';
 const CourseHome = () => {
 
     const courses = useLoaderData();
+    console.log(courses)
 
     return (
         <div>
             <h2 className='my-4 text-white'>Explore Our All Master Courses</h2>
-            <div className='course-container'>
+            <div className='courses'>
                 {
                     courses.map(course=><CourseCard key={course._id} course={course}></CourseCard>)
                 }
