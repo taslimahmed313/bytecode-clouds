@@ -51,7 +51,7 @@ const Blog = () => {
             approach to creating web servers, for each incoming request or
             connection the server spawns a new thread of execution or even forks
             a new process to handle the request and send a response.
-            Conceptually, this makes perfect sense, but in practice it incurs a
+            Conceptually this makes perfect sense, but in practice it incurs a
             great deal of overhead.
           </p>
         </div>
